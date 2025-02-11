@@ -1,0 +1,14 @@
+{
+    "accountId": "2GYd5PzPT6mOrQnYlwHtuQ",
+    "identifier": "virtualanservice",
+    "orgIdentifier": "default",
+    "projectIdentifier": "config_mgmt",
+    "name": "virtualan-service-1",
+    "deleted": false,
+    "tags": {},
+    "yaml": "service:\n  name: virtualan-service-1\n  identifier: virtualanservice\n  orgIdentifier: default\n  project_identifier: config_mgmt\n  serviceDefinition:\n    spec:\n      manifests:\n        - manifest:\n            identifier: autodemo1\n            type: K8sManifest\n            spec:\n              store:\n                type: Github\n                spec:\n                  connectorRef: account.GIT\n                  gitFetchType: Branch\n                  paths:\n                    - servicedeploy.yaml\n                  branch: elan-harness-auto-1\n              skipResourceVersioning: false\n              enableDeclarativeRollback: false\n    type: Kubernetes\n",
+    "v2Service": false,
+    "connectorRef": "account.GIT",
+    "storeType": "REMOTE",
+    "fallbackBranch": "elan-harness-auto-1"
+}
